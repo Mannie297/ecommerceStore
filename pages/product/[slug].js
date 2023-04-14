@@ -18,7 +18,7 @@ const ProductDetails = ({productst,producttd,qq}) => {
     const {image, name, details, price } = producttd;
     const [index, setIndex] = useState(0);
     const { decQty, incQty, qty, onAdd, handleBuyNow} = useStateContext();
-    console.log(producttd)
+    //console.log(producttd)
 
     
 
@@ -76,17 +76,17 @@ const ProductDetails = ({productst,producttd,qq}) => {
                             </div>
                             <div>
                                 {product.details && (
-                                    <p4>{product.details}</p4>
+                                    <p>{product.details}</p>
                                 )}
                             </div>
                             <div>
                                 {product.details && (
-                                    <p4>{product.stripe}</p4>
+                                    <p>{product.stripe}</p>
                                 )}
                             </div>
                             <div className='price'>
                                 {product.price && (
-                                    <p4>${product.price}</p4>
+                                    <p>${product.price}</p>
                                 )}
                             </div>
                             <div className='quantity'>
