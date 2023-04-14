@@ -34,8 +34,6 @@ const Cart = () => {
 
   }
 
-
-
   const checkOut = async () => {
     await fetch('/api/stripe', {
         method: "POST",
@@ -46,9 +44,11 @@ const Cart = () => {
     }).then((response) => {
         return response.json();
         
+        
     }).then((response) => {
         if(response.url) {
           window.location.assign(response.url);
+          toast.loading('Redirecting...');
 
         }
     });
