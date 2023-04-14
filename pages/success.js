@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import Link from 'next/link';
-import { BsBagCheckFill} from 'react-icons/bs';
+//import { BsBagCheckFill} from 'react-icons/bs';
 
-import { useStateContext } from '@/context/StateContext';
+//import { useStateContext } from '@/context/StateContext';
 import { runFireworks } from '@/lib/util';
 
 const success = () => {
