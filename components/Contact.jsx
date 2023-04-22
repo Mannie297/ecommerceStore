@@ -3,7 +3,7 @@ import React from 'react'
 import { useStateContext } from '@/context/StateContext'; 
 
 
-const contact = () => {
+const Contact = () => {
 
     const { onSubmitt, handleChange, values} = useStateContext();   
 
@@ -60,4 +60,4 @@ const contact = () => {
   );
 };
 
-export default contact
+export default Contact
