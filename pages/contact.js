@@ -3,14 +3,18 @@ import React, { useState } from 'react'
 //import { useState } from 'react';
 import { toast } from 'react-hot-toast';
 
+import { useStateContext } from '@/context/StateContext';
+
 //const iniValues = {firstName:"",lastName:"",email:"",subject:"",message:"",}
 //const iniState = { values: iniValues};
 
 
 const contact = () => {
 
-    const iniValues = {firstName:"",lastName:"",email:"",subject:"",message:"",}
-    const iniState = { values: iniValues};
+    const { onSubmitt, handleChange, values} = useStateContext();
+
+    /*const iniValues = {firstName:"",lastName:"",email:"",subject:"",message:"",}
+    const iniState = {values: iniValues};
     
     const [state, setState] = useState(iniState);
     const {values, error} = state;
@@ -39,10 +43,9 @@ const contact = () => {
             error: error.message,
             }));            
         }
-
-        //toast.success(`message sent`);
         
     };
+    */
 
   return (
 

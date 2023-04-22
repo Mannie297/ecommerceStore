@@ -1,6 +1,7 @@
 
 import React, {createContext, useContext, useState, useEffect} from "react";
 import {toast} from 'react-hot-toast';
+import { sendContactForm } from "@/lib/sendContact";
 
 const Context = createContext();
 
@@ -10,6 +11,12 @@ export const StateContext = ({children}) => {
     const [totalPrice, setTotalPrice] = useState(0);
     const [totalQuantities, setTotalQuantities] = useState(0);
     const [qty, setQty] = useState(1);
+
+    const iniValues = {firstName:"",lastName:"",email:"",subject:"",message:"",}
+    const iniState = {values: iniValues};
+    
+    const [state, setState] = useState(iniState);
+    const {values, error} = state;
 
     let foundProduct;
     let index;
@@ -89,6 +96,36 @@ export const StateContext = ({children}) => {
         });
     }
 
+    const handleChange = ({target}) => setState((prev) =>({
+        ...prev,
+        values:{
+            ...prev.values,
+            [target.name]: target.value,
+        },
+    }));
+
+    const onSubmitt = async () => {
+        
+        setState((prev) => ({
+            ...prev,
+        }));
+        try {
+            await sendContactForm(values);
+            
+            setState(iniState);
+                        
+        } catch (error) {
+            setState((prev) => ({
+                ...prev,
+            error: error.message,
+            }));            
+        }
+        
+    };
+
+
+
+
     return(
         <Context.Provider value={{
             showCart,
@@ -105,7 +142,10 @@ export const StateContext = ({children}) => {
             setCartItems,
             setTotalPrice,
             setTotalQuantities,
-            handleBuyNow
+            handleBuyNow,
+            handleChange,
+            onSubmitt,
+            values
         }}>
             {children}
         </Context.Provider>
