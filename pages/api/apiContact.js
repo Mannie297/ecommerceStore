@@ -35,6 +35,7 @@ const handler = async (req, res) => {
             console.log(error);
             return res.status(400).json({ message: error.message });
         }
+        res.render('contact')
     }
     
     return res.status(400).json({ message: 'Bad request' })
