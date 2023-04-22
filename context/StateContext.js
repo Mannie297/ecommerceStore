@@ -105,21 +105,16 @@ export const StateContext = ({children}) => {
     }));
 
     const onSubmitt = async () => {
+        const iniState = {values: iniValues};
         
         setState((prev) => ({
             ...prev,
         }));
-        try {
-            await sendContactForm(values);
-            
-            setState(iniState);
-                        
-        } catch (error) {
-            setState((prev) => ({
-                ...prev,
-            error: error.message,
-            }));            
-        }
+               
+        await sendContactForm(values);            
+
+        toast.success(`Mail Sent.`)
+        setState(iniState);
         
     };
 
@@ -145,7 +140,8 @@ export const StateContext = ({children}) => {
             handleBuyNow,
             handleChange,
             onSubmitt,
-            values
+            values,
+            iniState
         }}>
             {children}
         </Context.Provider>

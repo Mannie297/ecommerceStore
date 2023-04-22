@@ -8,8 +8,10 @@ const Contact = () => {
     const { onSubmitt, handleChange, values} = useStateContext();   
 
   return (
+    
 
     <section>
+        
         <div className="contacty">
             <h1>Contact Us</h1>
        </div>
@@ -21,6 +23,7 @@ const Contact = () => {
             <div className="contacty-form">
                 
                 <form method='POST' action='contact'>
+                
                     <div className="row">
                         <div className="input50">
                             <input type="text" placeholder='First Name' name='firstName' required value={values.firstName} onChange={handleChange}/>

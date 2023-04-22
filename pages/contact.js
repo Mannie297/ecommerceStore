@@ -1,7 +1,9 @@
 
 import React from 'react'
-import { Contact } from '@/components'
 
+//import { Contact } from '@/components'
+
+/*
 const contact = () => {
   return (
     <div>
@@ -11,61 +13,16 @@ const contact = () => {
 }
 
 export default contact
+*/
 
 
-
-/*
-import { sendContactForm } from '@/lib/sendContact';
-import React, { useState } from 'react'
-//import { useState } from 'react';
-import { toast } from 'react-hot-toast';
 
 import { useStateContext } from '@/context/StateContext';
 
-//const iniValues = {firstName:"",lastName:"",email:"",subject:"",message:"",}
-//const iniState = { values: iniValues};
 
-
-
-
-const contact = () => {
+const Contact = () => {
 
     const { onSubmitt, handleChange, values} = useStateContext();
-
-    const iniValues = {firstName:"",lastName:"",email:"",subject:"",message:"",}
-    const iniState = {values: iniValues};
-    
-    const [state, setState] = useState(iniState);
-    const {values, error} = state;
-
-    const handleChange = ({target}) => setState((prev) =>({
-        ...prev,
-        values:{
-            ...prev.values,
-            [target.name]: target.value,
-        },
-    }));
-
-    const onSubmitt = async () => {
-        
-        setState((prev) => ({
-            ...prev,
-        }));
-        try {
-            await sendContactForm(values);
-            
-            setState(iniState);
-                        
-        } catch (error) {
-            setState((prev) => ({
-                ...prev,
-            error: error.message,
-            }));            
-        }
-        
-    };
-    
-    
 
   return (
 
@@ -120,6 +77,5 @@ const contact = () => {
   );
 };
 
-export default contact
+export default Contact
 
-*/

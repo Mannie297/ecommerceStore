@@ -1,6 +1,5 @@
 import { mailOptions, transporter } from "@/lib/nodemailer";
 
-
 const handler = async (req, res) => {
     if (req.method === "POST"){
         const data = req.body;
@@ -31,7 +30,7 @@ const handler = async (req, res) => {
                 text:'Hello',
                 html:output
             });
-            
+                        
             return res.status(200).json({success: true })
             
         } catch (error) {
