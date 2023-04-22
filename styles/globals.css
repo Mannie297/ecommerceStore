@@ -32,6 +32,13 @@ width: 100%;
   margin: 6px 18px;
   position: relative;
 }
+
+.contact-container{
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 50px;
+  position: relative;
+}
 .marquee-text{
   font-size: 29px;
   font-weight: 600;
@@ -77,21 +84,36 @@ width: 100%;
   transition: transform .4s ease;
   border: none;
   background-color: transparent;
+  margin-right: 10px;
 }
+
+.conte {
+  height: 50%;
+  width: 80%;
+  display: flex;
+  cursor: pointer;
+  justify-content: right;
+  align-items: center;
+  font-size: 18px;
+  color: gray;
+}
+
 .cart-icon:hover{
   transform: scale(1.1,1.1);
 }
 .cart-item-qty{
   position: absolute;
-  right: -8px;
+  right: -1px;
+  left: -1;
   font-size: 12px;
   color: #eee;
   background-color: #f02d34;
-  width: 18px;
+  width: 5px;
   height: 18px;
   border-radius: 50%;
   text-align: center;
   font-weight: 600;
+  display: flex;
 
 }
 .products-container{
@@ -140,6 +162,18 @@ width: 100%;
 }
 .hero-banner-container .beats-solo{
   font-size: 20px;
+}
+
+.hero-banner-container .beats-solo2{
+  position: relative;
+  left: 1%;
+  top: 35%;
+  width: 310px;
+  line-height: 1.3;
+  display: flex;
+  flex-direction: column;
+  color: white;
+    
 }
 .hero-banner-container button{
    border-radius: 15px;
@@ -618,25 +652,169 @@ margin-top: 160px;
   margin-top: 10px;
 }
 
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-top: 5px;
+}
+
+section.home{
+  flex-direction: row;
+  margin-top: 0;
+}
+
+section .home-content-inner h2{
+  position: relative;
+  top: 12%;
+  color: #f60f20;
+}
+
+.contacty{
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.contacty-form{
+  position: relative;
+  background: #f9f9f9;
+  width: calc(100% - 400px);
+  padding: 60px 40px 20px;
+}
+
+.contacty-form form{
+  width: 100%;
+}
+
+.contacty-form .row{
+  width: 100%;
+  display: flex;
+}
+
+.contacty-form .input50{
+  width: 50%; /*Separates first and last name & email+subject*/
+  margin: 0 10px;
+}
+
+.contacty-form .input100{
+  width: 100%; /*Separates first and last name & email+subject*/
+  margin: 0 10px;
+}
+
+.contacty-form .row input, 
+.contacty-form .row textarea{
+  position: relative;
+  border: 1px solid rgba(0,0,0,0.2);
+  color: #111;
+  background: transparent;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 10px 0;
+  resize: none;
+}
+
+.contacty-form .row textarea{
+  /*Increases message box height*/
+  height: 150px;
+}
+
+.contacty-form .row input[type='submit']{
+  /*for the send button color*/
+  background-color: #1b206e;
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 300;
+  border: 0;
+  cursor: pointer;
+}
+
+.contacty-info{
+  width: 350px;
+  background: #f9f9f9;
+  padding: 60px 40px 20px; /*60 pixels top, 40 pixels left&right, 20pixels bottom*/
+}
+
+.contacty-info .info-box{
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+.contacty-info .info-box .contact-icon{
+  /*transform: scale(0.3);*/
+  width: 40px;
+  margin-right: 40px;
+
+}
+
+.contacty-info .info-box .details h4{
+  color: #1b206e;
+}
+
+.contacty-info .info-box .details p, 
+.contacty-info .info-box .details a {
+  color: #111;
+}
+
+.cntbut{
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 12px;
+  border-radius: 15px;
+  
+  border: none;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-top: 40px;
+  text-transform: uppercase;
+  background-color: #f02d34;
+  color: #fff;
+  cursor: pointer;
+    transform: scale(1, 1);
+  transition: transform 0.5s ease;
+}
+
+.cntbut-container{
+  justify-content: center;
+  width: 400px;
+  margin: auto;
+}
+
+.cntbut:hover{
+  transform: scale(1.1,1.1);
+}
+
+
+
+
 @media screen and (max-width:800px) {
   .hero-banner-container{
     height: 560px;
   }
   .hero-banner-image{
-    width: 77%;
-    height: 62%;
-    top: -2%;
-    right: -6%;
+    width: 57%;
+    height: 52%;
+    top: 20%;
+    right: 1%;
   }
   .footer-banner-container{
     height: 560px;
     margin-top: 80px;
   }
   .footer-banner-image{
-    width: 77%;
-    left: 30%;
+    width: 57%;
+    left: 42%;
     top: 6%;
-    height: 56%
+    height: 46%
   }
   .banner-desc .left h3{
     font-weight: 900;
@@ -671,6 +849,17 @@ margin-top: 160px;
   .hero-banner-container button{
     margin-top: 90px;
     z-index: 10000;
+  }
+  .hero-banner-container .beats-solo2{
+    position: relative;
+    left: 5%;
+    top: 35%;
+    width: 310px;
+    line-height: 1.3;
+    display: flex;
+    flex-direction: column;
+    color: white;
+      
   }
   .desc{
    bottom: 60px;
@@ -760,4 +949,90 @@ margin-top: 160px;
   width: 300px;
   margin: auto;
 }
+
+.conte {
+  height: 50%;
+  width: 40%;
+  display: flex;
+  cursor: pointer;
+  justify-content: right;
+  align-items: center;
+  font-size: 18px;
+  color: gray;
+}
+
+.contacty-form{
+  position: relative;
+  background: #f9f9f9;
+  width: calc(100% - 15px);
+  padding: 40px 30px 20px;
+}
+
+.contacty-form form{
+  width: 260px;
+}
+
+.contacty-form .row{
+  width: 100%;
+  display: flex;
+}
+
+.contacty-form .input50{
+  width: 50%; /*Separates first and last name & email+subject*/
+  margin: 0 5px;
+}
+
+.contacty-form .input100{
+  width: 100%; /*Separates first and last name & email+subject*/
+  margin: 0 5px;
+}
+
+.contacty-form .row input, 
+.contacty-form .row textarea{
+  position: relative;
+  border: 1px solid rgba(0,0,0,0.2);
+  color: #111;
+  background: transparent;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 10px 0;
+  resize: none;
+}
+
+.contacty-form .row textarea{
+  /*Increases message box height*/
+  height: 200px;
+}
+
+.contacty-info{
+  width: 350px;
+  background: #f9f9f9;
+  padding: 60px 40px 20px; /*60 pixels top, 40 pixels left&right, 20pixels bottom*/
+}
+
+.contacty-info .info-box{
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+.contacty-info .info-box .contact-icon{
+  /*transform: scale(0.3);*/
+  width: 40px;
+  margin-right: 40px;
+
+}
+
+.contacty-info .info-box .details h4{
+  color: #1b206e;
+}
+
+.contacty-info .info-box .details p, 
+.contacty-info .info-box .details a {
+  color: #111;
+}
+
+
 }

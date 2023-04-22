@@ -17,7 +17,7 @@ const HeroBanner = ({ heroBanner}) => {
       <div>
         <p className='beats-solo'>{heroBanner.smallText}</p>
         <h3>{heroBanner.midText}</h3>
-        <h1>{heroBanner.largeText1}</h1>
+        <h1 className='beats-solo2'>{heroBanner.largeText1}</h1>
         <img src={heroBanner.image} className='hero-banner-image' alt={heroBanner.name}></img>
         
         <div>
