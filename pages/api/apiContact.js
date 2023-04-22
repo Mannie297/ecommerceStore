@@ -30,16 +30,11 @@ const handler = async (req, res) => {
                 text:'Hello',
                 html:output
             });
-                        
-            return (`${req.headers.origin}/success`)
             
         } catch (error) {
             console.log(error);
             return res.status(400).json({ message: error.message });
         }
-        
-        
-
     }
     
     return res.status(400).json({ message: 'Bad request' })
