@@ -31,7 +31,7 @@ const handler = async (req, res) => {
                 html:output
             });
                         
-            return res.status(200).json({success: true })
+            return (`${req.headers.origin}/success`)
             
         } catch (error) {
             console.log(error);
@@ -44,9 +44,5 @@ const handler = async (req, res) => {
     
     return res.status(400).json({ message: 'Bad request' })
   }
-
-  return (`${req.headers.origin}/success`)
-
-
 
 export default handler;
