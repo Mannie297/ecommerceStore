@@ -3,11 +3,14 @@ import React, { useState } from 'react'
 //import { useState } from 'react';
 import { toast } from 'react-hot-toast';
 
-const iniValues = {firstName:"",lastName:"",email:"",subject:"",message:"",}
-const iniState = { values: iniValues};
+//const iniValues = {firstName:"",lastName:"",email:"",subject:"",message:"",}
+//const iniState = { values: iniValues};
 
 
 const contact = () => {
+
+    const iniValues = {firstName:"",lastName:"",email:"",subject:"",message:"",}
+    const iniState = { values: iniValues};
     
     const [state, setState] = useState(iniState);
     const {values, error} = state;
