@@ -38,11 +38,14 @@ const handler = async (req, res) => {
             return res.status(400).json({ message: error.message });
         }
         
+        
 
     }
     
     return res.status(400).json({ message: 'Bad request' })
   }
+
+  return (`${req.headers.origin}/success`)
 
 
 
