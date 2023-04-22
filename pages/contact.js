@@ -37,7 +37,7 @@ const Contact = () => {
         <div className="contacty">
             <div className="contacty-form">
                 
-                <form method='POST' action='success'>
+                <form method='POST'>
                     <div className="row">
                         <div className="input50">
                             <input type="text" placeholder='First Name' name='firstName' required value={values.firstName} onChange={handleChange}/>
