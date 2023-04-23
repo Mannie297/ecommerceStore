@@ -2,6 +2,7 @@
 import React, {createContext, useContext, useState, useEffect} from "react";
 import {toast} from 'react-hot-toast';
 import { sendContactForm } from "@/lib/sendContact";
+import { Contact } from "@/components";
 
 const Context = createContext();
 
@@ -108,9 +109,7 @@ export const StateContext = ({children}) => {
 
         toast.success(`Mail Sent.`)
                        
-        await sendContactForm(values)
-    
-        setState(iniState);        
+        //await sendContactForm(values)      
     };
 
     return(
