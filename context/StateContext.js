@@ -105,13 +105,12 @@ export const StateContext = ({children}) => {
     }));
 
     const onSubmitt = async () => {
-                       
-        await sendContactForm(values); 
-                 
 
         toast.success(`Mail Sent.`)
-        setState(iniState);
-        
+                       
+        await sendContactForm(values)
+    
+        setState(iniState);        
     };
 
     return(
