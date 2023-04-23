@@ -22,14 +22,7 @@ import { useStateContext } from '@/context/StateContext';
 
 const Contact = () => {
 
-    const onSubmitt = async () => {
-
-        toast.success(`Mail Sent.`)
-                       
-        //await sendContactForm(values)      
-    };
-
-    const { handleChange, values} = useStateContext();
+   const { onSubmitt, handleChange, values} = useStateContext();
 
   return (
 
